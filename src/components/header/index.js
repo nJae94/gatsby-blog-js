@@ -9,20 +9,24 @@ export const Header = ({ title, location, rootPath }) => {
     const isRoot = location.pathname === rootPath;
 
     return (
-        <div className="top">
-            {
-                isRoot && (
-                    <div>
-                        <Link to={"/"} className="link">
-                            {title}
-                        </Link>
-                    </div>
-                )
-            }
+        <header>
+            <div className="wrapper">
+                <div className="top">
+                    {
+                        isRoot && (
+                            <div className="title">
+                                <Link to={"/"} className="link">
+                                    {title}
+                                </Link>
+                            </div>
+                        )
+                    }
 
-            <div className="switch-mode-container">
-                <ThemeSwitch />
-            </div>
-        </div>
+                    <div className="switch-mode-container">
+                        <ThemeSwitch />
+                    </div>
+                </div>
+            </div>  
+        </header>
     )
 }

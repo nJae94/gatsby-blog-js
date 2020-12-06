@@ -18,6 +18,12 @@ body.light {
         color: $light-link-color;
       }
     }
+
+    .menu {
+      a{
+        color: $light-meun-color;
+      }
+    }
   
     .category-container {
       border-top: 1px solid $light-category-border-color;

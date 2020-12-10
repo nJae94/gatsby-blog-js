@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import { Link } from 'gatsby';
 import { ThemeSwitch } from '../theme-switch';
 import styled from 'styled-components';
@@ -8,17 +8,11 @@ export const Header = ({ title, location, rootPath }) => {
 
     const isRoot = location.pathname === rootPath;
 
-    const MenuIcon = () => {
-        return (
-            <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            width="24" 
-            height="24"
-            viewBox="0 0 24 24">
-                <path d="M4 22h-4v-4h4v4zm0-12h-4v4h4v-4zm0-8h-4v4h4v-4zm3 0v4h17v-4h-17zm0 12h17v-4h-17v4zm0 8h17v-4h-17v4z"/>
-            </svg>
-        )
-      }
+    const [click,setClick] = useState(false);
+
+    const onClick = () => {
+        setClick(!click);
+    }
 
     return (
         <header>
@@ -42,14 +36,18 @@ export const Header = ({ title, location, rootPath }) => {
                         <div className="switch-mode-container">
                             <ThemeSwitch />
                         </div>
-                        
-                        {/* <button className="mobile-menu">
-                            <MenuIcon/>
-                        </button> */}
-                        <div className="mobile-menu ">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div className="mobile-menu" onClick={onClick}>
+                            <div className={"hamburger " + (click ? "is-active" : "")} id="hamburger-6">
+                                <span className="line"></span>
+                                <span className="line"></span>
+                                <span className="line"></span>
+                            </div>
+
+                            <ul className={(click ? "click" : "none")}>
+                                <li>fajefj</li>
+                                <li>fajefj</li>
+                                <li>fajefj</li>
+                            </ul>
                         </div>
                     </Menu>
                 </div>
@@ -75,6 +73,26 @@ const Menu = styled.div`
     }
 
     @media screen and (max-width: 768px) {
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
         .menu {
             display: none;
         }
@@ -82,50 +100,38 @@ const Menu = styled.div`
         .mobile-menu {
             display:block;
             position: relative;
-            width: 32px;
-            height: 32px;
 
-            span {
-                position: absolute;
-                left:0;
-                width: 100%;
-                height: 4px;
-                background-color:#000;
-                border-radius: 4px;
+            .click {
+                position:absolute;
+                background-color:#F4F7FB;
+                opacity: 0.8;
+                right: 0;
+                width:80vw;
+                animation: fade-in 1.2s;
+                animation-fill-mode: forwards;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                
+                li{
+                    position: relative;
+                    width: 100%;
+                    cursor: pointer;
+                    text-align:center;
 
-                &:nth-child(1)
-                {
-                    top:0;
-                }
-                
-                &:nth-child(2)
-                {
-                    top:14px;
-                }
-                
-                &:nth-child(3)
-                {
-                    bottom:0;
                 }
             }
-            .ative
-            {
-                span {
-                    &:nth-child(1)
-                    {
-                        -webkit-transform: translateY(20px) rotate(-45deg);
-                        transform : translateY(20px) rotate(-45deg);
-                    }
-                    &:nth-child(2)
-                    {
-                        opacity:0;
-                    }
-                    &:nth-child()
-                    {
-                        -webkit-transform: translateY(20px) rotate(45deg);
-                        transform : translateY(20px) rotate(45deg);
-                    }
-                }
+
+            .none {
+                right: 0;
+                width:calc(100% * 4);
+                position:absolute;
+                animation: fade-out 0.5s;
+                animation-fill-mode: forwards;
+                list-style: none;
+
+                transition-property: width;
+                transition-duration: 3s;
             }
         }
     }

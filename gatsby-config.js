@@ -1,15 +1,16 @@
 module.exports = {
   siteMetadata: {
     title: `nJae94.io`,
+    introduction: `Web Front-end Engineer 좋은 서비스를 효율적으로 잘 구현해내는 개발자를 꿈꾸고 있습니다.`,
     author: {
-      name: `sunjae-jeong`,
+      name: `nJae94`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
       twitter: `kylemathews`,
     },
+    
   },
   plugins: [
     {

@@ -1,20 +1,23 @@
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import React from "react";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import Image from "gatsby-image";
+
+import './index.scss';
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/profile3.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50, quality: 95) {
+          fixed(width: 72, height: 72, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       site {
         siteMetadata {
+          introduction
           author {
             name
             summary
@@ -28,29 +31,44 @@ const Bio = () => {
   `)
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
-  const author = data.site.siteMetadata?.author
-  const social = data.site.siteMetadata?.social
+  const author = data.site.siteMetadata?.author;
 
-  const avatar = data?.avatar?.childImageSharp?.fixed
+  const avatar = data?.avatar?.childImageSharp?.fixed;
+
+  const introduction = data.site.siteMetadata?.introduction;
 
   return (
     <div className="bio">
-      {avatar && (
-        <Image
-          fixed={avatar}
-          alt={author?.name || ``}
-          className="bio-avatar"
-          imgStyle={{
-            borderRadius: `50%`,
-          }}
-        />
-      )}
-      {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-        </p>
-      )}
+      <div className="author">
+        <div className="author-description">
+
+          <div className="profile-img">
+            <Image
+              className="author-image"
+              fixed={avatar}
+              alt={author}
+              style={{
+                borderRadius: `30%`,
+                }}
+            />
+          </div>
+          
+          <div className="description">
+
+            <div className="author-name">
+                <span className="name">Written by</span>
+                <Link to={'/'} className="content">
+                  <span>@{author.name}</span>
+                </Link>
+            </div>
+            
+            <div className="introduction">
+                {introduction}
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   )
 }

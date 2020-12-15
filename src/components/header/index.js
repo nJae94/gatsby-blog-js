@@ -44,9 +44,9 @@ export const Header = ({ title, location, rootPath }) => {
                             </div>
 
                             <ul className={(click ? "click" : "none")}>
-                                <li>fajefj</li>
-                                <li>fajefj</li>
-                                <li>fajefj</li>
+                                <li><Item>TIL</Item></li>
+                                <li><Item>TOPIC</Item></li>
+                                <li><Item>Etc</Item></li>
                             </ul>
                         </div>
                     </Menu>
@@ -100,11 +100,11 @@ const Menu = styled.div`
         .mobile-menu {
             display:block;
             position: relative;
-
+         
             .click {
                 position:absolute;
                 background-color:#F4F7FB;
-                opacity: 0.8;
+                
                 right: 0;
                 width:80vw;
                 animation: fade-in 1.2s;
@@ -114,10 +114,12 @@ const Menu = styled.div`
                 flex-direction: column;
                 
                 li{
+                    
                     position: relative;
                     width: 100%;
                     cursor: pointer;
                     text-align:center;
+                    border-bottom: 1px solid #efefef;
 
                 }
             }

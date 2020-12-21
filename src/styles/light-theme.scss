@@ -53,12 +53,19 @@ body.light {
     }
   
     .thumbnail {
+      width:100%;
+      height: 18vh;
+      margin-bottom: 1rem;
+      padding: 10px 10px;
+      display:flex;
+
       h3 {
         color: $dark-gray;
       }
-      p {
+      .date {
         color: $middle-gray;
       }
+      
       &:hover {
         text-shadow: $light-hover-text-shadow;
       }
@@ -69,6 +76,11 @@ body.light {
       a {
         color: $dark-gray;
       }
+    }
+
+    .blogWrapper {
+      display: flex;
+      
     }
   
     // post

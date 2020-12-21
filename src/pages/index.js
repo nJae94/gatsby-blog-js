@@ -19,7 +19,7 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <MainContent title={title} post={post}/>
+            <MainContent key={title} title={title} post={post}/>
           )
         })}
       </Wrapper>

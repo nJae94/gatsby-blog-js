@@ -12,26 +12,31 @@ export const Header = ({ title, location, rootPath }) => {
 
     const onClick = () => {
         setClick(!click);
-    }
+    };
+
+    const ListLink = props => (
+        <Item to={props.to}>
+            {props.children}
+        </Item>
+    )
 
     return (
         <header>
             <div className="wrapper">
                 <div className="top">
                     {
-                        isRoot && (
+                        
                             <div className="title">
                                 <Link to={"/"} className="link">
                                     {title}
                                 </Link>
                             </div>
-                        )
+                        
                     }
                     <Menu>
                         <nav className="menu">
-                            <Item>TIL</Item>
-                            <Item>TOPIC</Item>
-                            <Item>Etc</Item>
+                            <ListLink to="/algorithm/">알고리즘</ListLink>
+                            <ListLink to="/about/">__About</ListLink>
                         </nav>
                         <div className="switch-mode-container">
                             <ThemeSwitch />
@@ -44,9 +49,8 @@ export const Header = ({ title, location, rootPath }) => {
                             </div>
 
                             <ul className={(click ? "click" : "none")}>
-                                <li><Item>TIL</Item></li>
-                                <li><Item>TOPIC</Item></li>
-                                <li><Item>Etc</Item></li>
+                                <li><ListLink to="/algorithm/">알고리즘</ListLink></li>
+                                <li><ListLink to="/about/">__About</ListLink></li>
                             </ul>
                         </div>
                     </Menu>
@@ -100,7 +104,6 @@ const Menu = styled.div`
         .mobile-menu {
             display:block;
             position: relative;
-         
             .click {
                 position:absolute;
                 background-color:#F4F7FB;
@@ -139,7 +142,12 @@ const Menu = styled.div`
     }
 `;
 
-const Item = styled.a`
+const Item = styled(Link)`
     padding: 0.2rem 0.7rem;
     font-size: 0.9rem;
+    text-decoration: none;
+
+    &:hover{
+        font-size:1rem;
+    }
 `;

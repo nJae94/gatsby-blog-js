@@ -1,9 +1,7 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import PostLayout from "../layout/postLayout";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 
 const BlogPostTemplate = ({ data, pageContext,location }) => {
   const post = data.markdownRemark
@@ -11,12 +9,29 @@ const BlogPostTemplate = ({ data, pageContext,location }) => {
   const { title, siteUrl, author, sponsor } = metaData
   const { title: postTitle, date } = post.frontmatter
 
-  console.log(pageContext);
-
   return (
-    <Layout location={location} title={title}>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </Layout>
+    <PostLayout location={location} title={postTitle}>
+      {/* <div className="post-Wapper" dangerouslySetInnerHTML={{ __html: post.html }} /> */}
+      <div className="post-Wapper">
+        <div className="content">
+          <div className="header=wrapper">
+            <h1>{postTitle}</h1>
+            <div className="summary-wrapper">
+              <div className="summary">
+                <div className="info">
+                  <div>1.fjfjfjf</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="post" dangerouslySetInnerHTML={{ __html: post.html }}>
+
+          </div>
+
+        </div>
+      </div>
+    </PostLayout>
   )
 }
 

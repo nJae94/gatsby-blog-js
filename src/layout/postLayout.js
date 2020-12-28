@@ -4,7 +4,7 @@ import {Header} from '../components/header';
 import './index.scss'
 
 const PostLayout = ({ location, title, children }) => {
-    
+
     return (
     <>
         <Header

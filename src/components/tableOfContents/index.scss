@@ -1,0 +1,18 @@
+.toc {
+
+    ul {
+        list-style:none;
+        margin-left:0.3rem; 
+
+        a{
+            text-decoration: none;
+        }
+    }
+
+    ul > li {
+        line-height: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

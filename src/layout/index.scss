@@ -15,9 +15,14 @@ body {
   float: right;
   display: flex;
   padding: 1rem;
+  margin-right:2rem;
 
   .content {
-    width:100%;
+    width:calc((100vw/2));
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
 
     h1{
       font-size: 3rem;
@@ -39,8 +44,7 @@ body {
         right: calc(1rem);
 
         .info{
-          margin-left: 3rem;
-          width: 150px;
+          width: calc(100vw/4 - 50px);
           border-left: 2px solid rgb(233, 236, 239);
           padding: 0.25rem 0.75rem;
           color: rgb(134, 142, 150);
@@ -48,15 +52,23 @@ body {
           font-size: 0.875rem;
           max-height: calc(100vh - 128px);
           overflow: hidden auto;
+
+          @media screen and (max-width: 768px) {
+            display: none;
+          }
         }
       }
     }
   }
   
   .post {
-    width:80%;
+  
     margin: 5rem auto 0px;
     float: left;
+
+    ul{
+      list-style:none;
+    }
   }
 
 }

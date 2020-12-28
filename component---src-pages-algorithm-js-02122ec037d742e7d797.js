@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"UAV/":function(n,e,t){"use strict";t.r(e),t.d(e,"pageQuery",(function(){return o}));var a=t("q1tI"),r=t.n(a);t("Otpx"),t("83Zx");e.default=function(n){var e=n.data;return console.log(e),r.a.createElement("div",null,"테스트")};var o="2239478271"}}]);
+//# sourceMappingURL=component---src-pages-algorithm-js-02122ec037d742e7d797.js.map

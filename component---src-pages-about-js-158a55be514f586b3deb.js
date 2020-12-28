@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{"3XHS":function(n,e,t){"use strict";t.r(e),t.d(e,"pageQuery",(function(){return o}));var a=t("q1tI"),r=t.n(a);t("Otpx"),t("83Zx");e.default=function(n){var e=n.data;return console.log(e),r.a.createElement("div",null,"테스트")};var o="2239478271"}}]);
+//# sourceMappingURL=component---src-pages-about-js-158a55be514f586b3deb.js.map

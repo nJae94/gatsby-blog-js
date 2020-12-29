@@ -60,7 +60,7 @@ const BlogPostTemplate = ({ data, pageContext,location }) => {
       {/* <div className="post-Wapper" dangerouslySetInnerHTML={{ __html: post.html }} /> */}
       <div className="post-Wapper">
         <div className="content">
-          <div className="header=wrapper">
+          <div className="header-wrapper">
             <h1>{postTitle}</h1>
             <div className="summary-wrapper">
               <div className="summary">
@@ -75,7 +75,7 @@ const BlogPostTemplate = ({ data, pageContext,location }) => {
             </div>
           </div>
 
-          <div className="post" dangerouslySetInnerHTML={{ __html: post.html }}>
+          <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }}>
 
           </div>
 

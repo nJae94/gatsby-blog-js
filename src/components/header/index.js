@@ -35,7 +35,7 @@ export const Header = ({ title, location, rootPath }) => {
                     }
                     <Menu>
                         <nav className="menu">
-                            <ListLink to="/algorithm/">알고리즘</ListLink>
+                            <ListLink to="/algorithm/">Algorithm</ListLink>
                             <ListLink to="/about/">__About</ListLink>
                         </nav>
                         <div className="switch-mode-container">
@@ -49,7 +49,7 @@ export const Header = ({ title, location, rootPath }) => {
                             </div>
 
                             <ul className={(click ? "click" : "none")}>
-                                <li><ListLink to="/algorithm/">알고리즘</ListLink></li>
+                                <li><ListLink to="/algorithm/">Algorithm</ListLink></li>
                                 <li><ListLink to="/about/">__About</ListLink></li>
                             </ul>
                         </div>
@@ -61,6 +61,7 @@ export const Header = ({ title, location, rootPath }) => {
 }
 
 const Menu = styled.div`
+
     display: flex;
     justify-content: space-around;
     float:left;

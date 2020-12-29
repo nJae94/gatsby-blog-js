@@ -24,17 +24,6 @@ body {
       width: 100%;
     }
 
-    h1{
-      font-size: 3rem;
-      line-height: 1.5;
-      letter-spacing: -0.004em;
-      margin-top: 0px;
-      font-weight: 800;
-      color: rgb(52, 58, 64);
-      margin-bottom: 2rem;
-      word-break: keep-all;
-    }
-
     .summary-wrapper {
       position: relative;
       margin-top: 2rem;
@@ -58,16 +47,6 @@ body {
           }
         }
       }
-    }
-  }
-  
-  .post {
-  
-    margin: 5rem auto 0px;
-    float: left;
-
-    ul{
-      list-style:none;
     }
   }
 

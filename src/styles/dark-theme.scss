@@ -23,10 +23,37 @@ body.dark {
   .menu {
     a{
       color: $dark-link-color;
+      text-decoration: none;
     }
     span 
     {
       color: $dark-link-color;
+    }
+  }
+
+  .header-wrapper {
+    h1{
+      font-size: 3rem;
+      line-height: 1.5;
+      letter-spacing: -0.004em;
+      margin-top: 0px;
+      font-weight: 800;
+      color:$light-gray;
+      margin-bottom: 2rem;
+      word-break: keep-all;
+    }
+  }
+
+  .post-content {
+
+    float: left;
+
+    h2, h3, h4, h5 {
+      color:$light-gray;
+    }
+
+    ul{
+      list-style:none;
     }
   }
 

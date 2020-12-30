@@ -1,9 +1,9 @@
-@import '../styles/variables.scss';
-@import '../styles/light-theme.scss';
-@import '../styles/dark-theme.scss';
+@import "../styles/variables.scss";
+@import "../styles/light-theme.scss";
+@import "../styles/dark-theme.scss";
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   background-color: $light-background-color;
   -webkit-text-size-adjust: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,14 +11,14 @@ body {
 }
 
 .post-Wapper {
-  width:80%;
+  width: 100%;
   float: right;
   display: flex;
   padding: 1rem;
-  margin-right:2rem;
+  margin-right: 2rem;
 
   .content {
-    width:calc((100vw/2));
+    width: calc((100vw / 2));
 
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -32,8 +32,8 @@ body {
         position: fixed;
         right: calc(1rem);
 
-        .info{
-          width: calc(100vw/4 - 50px);
+        .info {
+          width: calc(100vw / 4 - 50px);
           border-left: 2px solid rgb(233, 236, 239);
           padding: 0.25rem 0.75rem;
           color: rgb(134, 142, 150);
@@ -49,5 +49,4 @@ body {
       }
     }
   }
-
 }

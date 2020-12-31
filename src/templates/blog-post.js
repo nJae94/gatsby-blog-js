@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../layout/"
 import TableOfContents from "../components/tableOfContents"
+import styled from 'styled-components'
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -47,7 +48,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={postTitle}>
-      <div className="post-Wapper">
+      <div className="post-Wrapper">
         <div className="content">
           <div className="header-wrapper">
             <h1>{postTitle}</h1>

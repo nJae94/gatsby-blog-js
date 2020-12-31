@@ -14,10 +14,10 @@ export const Header = ({ title, location, rootPath, show }) => {
   }
 
   const ListLink = props => <Item to={props.to}>{props.children}</Item>
-  console.log(show)
+
   return (
     <header>
-      <div className={`wrapper ${show === true ? "show" : "hide"}`}>
+      <div className={`wrapper ${(isRoot || show ) ? "show" : "hide"}`}>
         <div className="top">
           {
             <div className="title">
@@ -28,6 +28,7 @@ export const Header = ({ title, location, rootPath, show }) => {
           }
           <Menu>
             <nav className="menu">
+            <ListLink to="/today/">TIL</ListLink>
               <ListLink to="/algorithm/">Algorithm</ListLink>
               <ListLink to="/about/">__About</ListLink>
             </nav>
@@ -45,6 +46,9 @@ export const Header = ({ title, location, rootPath, show }) => {
               </div>
 
               <ul className={click ? "click" : "none"}>
+                <li>
+                  <ListLink to="/today/">TIL</ListLink>
+                </li>
                 <li>
                   <ListLink to="/algorithm/">Algorithm</ListLink>
                 </li>
@@ -102,12 +106,13 @@ const Menu = styled.div`
     .mobile-menu {
       display: block;
       position: relative;
+
       .click {
         position: absolute;
         background-color: #f4f7fb;
 
-        right: 0;
-        width: 80vw;
+        right: -1rem;
+        width: 100vw;
         animation: fade-in 1.2s;
         animation-fill-mode: forwards;
         list-style: none;

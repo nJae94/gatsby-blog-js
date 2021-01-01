@@ -21,39 +21,40 @@ body.dark {
   }
 
   .menu {
-    a{
+    a {
       color: $dark-link-color;
       text-decoration: none;
     }
-    span 
-    {
+    span {
       color: $dark-link-color;
     }
   }
 
   .header-wrapper {
-    h1{
+    h1 {
       font-size: 3rem;
       line-height: 1.5;
       letter-spacing: -0.004em;
       margin-top: 0px;
       font-weight: 800;
-      color:$light-gray;
+      color: $light-gray;
       margin-bottom: 2rem;
       word-break: keep-all;
     }
   }
 
   .post-content {
-
     float: left;
 
-    h2, h3, h4, h5 {
-      color:$light-gray;
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $light-gray;
     }
 
-    ul{
-      list-style:none;
+    ul {
+      list-style: none;
     }
   }
 
@@ -61,31 +62,39 @@ body.dark {
     border-top: 1px solid $dark-category-border-color;
     border-bottom: 1px solid $dark-category-border-color;
     background-color: $dark-category-background-color;
-    list-style: none;
+    display: flex;
+    padding: 5px 2rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     .item {
-      border: 1px solid $dark-category-border-color;
+      border: 3px solid $dark-category-border-color;
       background-color: $dark-category-item-color;
       -webkit-box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.1);
       box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.1);
-      a {
-        color: $dark-category-text-color;
-      }
-      &[aria-selected='true'] {
-        border: 2px solid $dark-category-highlight-border-color;
-        font-weight: bolder;
-      }
-      &[aria-selected='true'] a {
-        color: $dark-category-highlight-text-color;
-      }
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      display: block;
+      padding: 7px;
+      font-size: 13px;
+      box-sizing: border-box;
+      cursor: pointer;
+      margin-right: 1rem;
     }
   }
 
   .thumbnail {
-    width:100%;
+    width: 100%;
     height: 18vh;
     margin-bottom: 1rem;
     padding: 10px 10px;
-    display:flex;
+    display: flex;
 
     h3 {
       color: $dark-light-font-color;

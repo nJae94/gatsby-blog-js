@@ -1,122 +1,119 @@
 body.light {
-    background-color: $light-background-color;
-    text-shadow: $light-text-shadow;
-  
-    // home
-    .home-header {
-      color: $dark-gray;
-    }
-  
-    .bio {
-      .content {
-        background-color: $light-category-border-color;
-      }
-      .author-introduction {
-        color: $middle-gray;
-      }
-      a {
-        color: $light-link-color;
-      }
-    }
+  background-color: $light-background-color;
+  text-shadow: $light-text-shadow;
 
-    .menu {
-      a{
-        color: $light-meun-color;
-        text-decoration: none;
-      }
-      span {
-        color: $light-meun-color;
-      }
-    }
+  // home
+  .home-header {
+    color: $dark-gray;
+  }
 
-    .header-wrapper {
-      h1{
-        font-size: 3rem;
-        line-height: 1.5;
-        letter-spacing: -0.004em;
-        margin-top: 0px;
-        font-weight: 800;
-        color:$dark-gray;
-        margin-bottom: 2rem;
-        word-break: keep-all;
-      }
+  .bio {
+    .content {
+      background-color: $light-category-border-color;
     }
-
-    .post-content {
-
-      float: left;
-
-      h2, h3, h4,h5 {
-        color:$dark-gray;
-      }
-  
-      ul{
-        list-style:none;
-      }
+    .author-introduction {
+      color: $middle-gray;
     }
-
-  
-    .tag-container {
-      border-top: 1px solid $light-category-border-color;
-      border-bottom: 1px solid $light-category-border-color;
-      list-style: none;
-      background-color: $light-category-background-color;
-      
-      .item {
-        border: 1px solid $light-category-border-color;
-        background-color: $light-category-item-color;
-        -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-        a {
-          color: $light-category-text-color;
-        }
-        &[aria-selected='true'] {
-          border: 2px solid $light-category-highlight-border-color;
-          font-weight: bolder;
-        }
-        &[aria-selected='true'] a {
-          color: $light-category-highlight-text-color;
-        }
-      }
-    }
-  
-    .thumbnail {
-      width:100%;
-      height: 18vh;
-      margin-bottom: 1rem;
-      padding: 10px 10px;
-      display:flex;
-
-      h3 {
-        color: $dark-gray;
-      }
-      .date {
-        color: $middle-gray;
-      }
-      
-      &:hover {
-        text-shadow: $light-hover-text-shadow;
-      }
-    }
-  
-    .footer {
-      color: $light-gray;
-      a {
-        color: $dark-gray;
-      }
-    }
-
-    .blogWrapper {
-      display: flex;
-      
-    }
-  
-    // post
-    .navigator {
-      a {
-        background-color: $navigator-background-color;
-        color: $navigator-text-color;
-      }
+    a {
+      color: $light-link-color;
     }
   }
-  
+
+  .menu {
+    a {
+      color: $light-meun-color;
+      text-decoration: none;
+    }
+    span {
+      color: $light-meun-color;
+    }
+  }
+
+  .header-wrapper {
+    h1 {
+      font-size: 3rem;
+      line-height: 1.5;
+      letter-spacing: -0.004em;
+      margin-top: 0px;
+      font-weight: 800;
+      color: $dark-gray;
+      margin-bottom: 2rem;
+      word-break: keep-all;
+    }
+  }
+
+  .post-content {
+    float: left;
+
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $dark-gray;
+    }
+
+    ul {
+      list-style: none;
+    }
+  }
+
+  .tag-container {
+    border-top: 1px solid $light-category-border-color;
+    border-bottom: 1px solid $light-category-border-color;
+    background-color: $light-category-background-color;
+    display: flex;
+    padding: 5px 2rem;
+
+    .item {
+      border: 1px solid $light-category-border-color;
+      background-color: $light-category-item-color;
+      -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      display: block;
+      padding: 7px;
+      font-size: 13px;
+      box-sizing: border-box;
+      cursor: pointer;
+      margin-right: 1rem;
+    }
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: 18vh;
+    margin-bottom: 1rem;
+    padding: 10px 10px;
+    display: flex;
+
+    h3 {
+      color: $dark-gray;
+    }
+    .date {
+      color: $middle-gray;
+    }
+
+    &:hover {
+      text-shadow: $light-hover-text-shadow;
+    }
+  }
+
+  .footer {
+    color: $light-gray;
+    a {
+      color: $dark-gray;
+    }
+  }
+
+  .blogWrapper {
+    display: flex;
+  }
+
+  // post
+  .navigator {
+    a {
+      background-color: $navigator-background-color;
+      color: $navigator-text-color;
+    }
+  }
+}

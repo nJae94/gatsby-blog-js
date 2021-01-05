@@ -1,10 +1,11 @@
-import React, { useEffect ,useState} from 'react';
+import React, { useEffect ,useState, useMemo} from 'react';
 import { graphql } from 'gatsby';
 import Layout from "../layout";
 import SEO from "../components/seo"
 import styled from 'styled-components';
 import MainContent from "../components/maincontent"
 import Tag from '../components/tag';
+import _ from 'lodash'
 
 export default ({data,location}) => {
 
@@ -13,22 +14,32 @@ export default ({data,location}) => {
 
   const [TIL, setTIL] = useState([])
 
+  const [tag, setTag] = useState("all");
+
+  console.log(tag);
+
+  const tags = useMemo(
+    () => _.uniq(posts.map(( post ) => post.frontmatter.tag)),
+    []
+  )
+
   useEffect(()=>{
 
-    const temp = posts.filter((post)=> post.frontmatter.category === "TIL");
+    setTIL(tag === 'all' ? 
+      posts.filter((post)=> post.frontmatter.category === "TIL") 
+      :
+      posts.filter((post)=> post.frontmatter.category === "TIL" && post.frontmatter.tag === tag)
+    );
 
-    setTIL(temp);
+  },[posts,tag]);
 
-  },[posts]);
-
-  console.log(TIL, posts);
   
     return (
       <Layout location={location} title={location.pathname.split("/")[1]}>
         <SEO title="TIL posts" />
         {/* <Tag/> */}
         <Wrapper>
-          <Tag></Tag>
+          <Tag tags={tags}setTags={setTag}/>
           {TIL.map(post => {
             const title = post.frontmatter.title || post.fields.slug
 

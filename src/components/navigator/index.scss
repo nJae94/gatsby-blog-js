@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+
+.navigator {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  height: 4rem;
+
+  li {
+    margin-bottom: 12px;
+    height: 4rem;
+  }
+
+  a {
+    padding: 7px 16px 8px 16px;
+    border-radius: 6px;
+    opacity: 0.8;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+  }
+}

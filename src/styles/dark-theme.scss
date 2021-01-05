@@ -45,7 +45,7 @@ body.dark {
 
   .post-content {
     float: left;
-
+    margin-bottom: 3rem;
     h2,
     h3,
     h4,
@@ -128,7 +128,7 @@ body.dark {
   .navigator {
     a {
       background-color: $navigator-background-color;
-      color: $navigator-text-color;
+      color: $light-gray;
     }
   }
   td {

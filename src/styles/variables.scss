@@ -1,13 +1,13 @@
-$theme-header-backgournd-color: #F4F7FB;
+$theme-header-backgournd-color: #f4f7fb;
 $theme-gradient: linear-gradient(72deg, #291e95, #cc007a);
-$top-header-text-color:  #2B2836;
+$top-header-text-color: #2b2836;
 
 /**
  * @light theme
  */
 
 // body
-$light-background-color: #FFFFFA;
+$light-background-color: #fffffa;
 $light-text-shadow: 0 0 0.1px rgba(0, 0, 0, 0.3);
 $light-hover-text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
 
@@ -22,7 +22,7 @@ $light-gray: #aaa;
 
 // blog-templates
 $navigator-text-color: #cc007a;
-$navigator-background-color: #fceff7;
+$navigator-background-color: rgb(248, 249, 250);
 $blockquote-text-color: #999;
 
 // code

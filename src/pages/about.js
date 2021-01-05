@@ -1,16 +1,14 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Bio from "../components/bio";
-import Layout from "../layout";
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../layout"
 
-export default ({data}) => {
-
-    console.log(data);
-
-    return (
-      <div>테스트</div>
-
-    )
+export default ({ location }) => {
+  return (
+    <Layout
+      location={location}
+      title={location.pathname.split("/")[1]}
+    ></Layout>
+  )
 }
 
 export const pageQuery = graphql`

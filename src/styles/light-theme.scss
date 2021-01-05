@@ -44,7 +44,7 @@ body.light {
 
   .post-content {
     float: left;
-
+    margin-bottom: 3rem;
     h2,
     h3,
     h4,
@@ -123,7 +123,7 @@ body.light {
   .navigator {
     a {
       background-color: $navigator-background-color;
-      color: $navigator-text-color;
+      color: $dark-gray;
     }
   }
 }

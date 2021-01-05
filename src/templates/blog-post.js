@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../layout/"
 import TableOfContents from "../components/tableOfContents"
-import styled from 'styled-components'
+import styled from "styled-components"
+import { Navigator } from "../components/navigator"
+import { Utterances } from "../components/utterances"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const metaData = data.site.siteMetadata
-  const { title, siteUrl, author, sponsor } = metaData
   const { title: postTitle, date } = post.frontmatter
 
   const [currentUrl, setCurrentUrl] = useState(undefined)
@@ -27,7 +28,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
         const isLast = el === headerElements[headerElements.length - 1]
 
-        if (currentOffsetY < elTop - 100) {
+        if (currentOffsetY < elTop - 200) {
           aboveHeaderUrl &&
             setCurrentUrl(aboveHeaderUrl.split(location.origin)[1])
           !aboveHeaderUrl && setCurrentUrl(undefined)
@@ -68,6 +69,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             className="post-content"
             dangerouslySetInnerHTML={{ __html: post.html }}
           ></div>
+          <Navigator pageContext={pageContext} />
+
+          <Utterances repo="nJae94/nJae94.github.io" />
         </div>
       </div>
     </Layout>

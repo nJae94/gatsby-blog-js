@@ -1,15 +1,25 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../layout"
+import styled from "styled-components"
+import { Summary } from "../components/summary"
+import { Info } from "../components/info"
 
 export default ({ location }) => {
   return (
-    <Layout
-      location={location}
-      title={location.pathname.split("/")[1]}
-    ></Layout>
+    <Layout location={location} title={location.pathname.split("/")[1]}>
+      <Wrapper>
+        <Info />
+        <Summary />
+      </Wrapper>
+    </Layout>
   )
 }
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 export const pageQuery = graphql`
   query {

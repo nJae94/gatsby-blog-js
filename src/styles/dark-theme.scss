@@ -134,4 +134,20 @@ body.dark {
   td {
     border-bottom: 1px solid #eee;
   }
+
+  .info-header {
+    border-bottom: 1px solid rgb(233, 236, 239);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+  }
+
+  .summary-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2rem;
+    border-bottom: 1px solid rgb(233, 236, 239);
+    padding-bottom: 2rem;
+  }
 }

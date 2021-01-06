@@ -6,7 +6,7 @@ export const Summary = () => {
   return (
     <setcion className="summary-wrapper">
       <div className="img-section">
-        <img src={js} alt="test" />
+        <img className="my-img" src={js} alt="test" />
       </div>
       <div className="description">
         Highly focused technologist with a multidisciplinary skill set honed

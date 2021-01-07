@@ -142,4 +142,35 @@ body.light {
     border-bottom: 1px solid rgb(233, 236, 239);
     padding-bottom: 2rem;
   }
+
+
+  .experience-wrapper {
+
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgb(233, 236, 239);
+  }
+
+  .h1-title {
+
+    font-size: 1.7rem;
+    font-weight: bold;
+    color:$light-title-color;
+    border-left: 4px solid $light-title-color;
+    padding-left: 0.75rem;
+  }
+
+  .h2-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .h3-title {
+    color: #718096;
+    font-size: 1rem;
+    margin-top: 0.6rem;
+    padding-left: 1rem;
+  }
 }

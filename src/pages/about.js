@@ -4,6 +4,7 @@ import Layout from "../layout"
 import styled from "styled-components"
 import { Summary } from "../components/summary"
 import { Info } from "../components/info"
+import {Experience} from '../components/experience'
 
 export default ({ location }) => {
   return (
@@ -11,6 +12,7 @@ export default ({ location }) => {
       <Wrapper>
         <Info />
         <Summary />
+        <Experience />
       </Wrapper>
     </Layout>
   )

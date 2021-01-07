@@ -140,6 +140,15 @@ body.dark {
     display: flex;
     justify-content: space-between;
     padding-bottom: 2rem;
+
+    span {
+      color: $dark-lightest-font-color;
+    }
+
+    a {
+      text-decoration: none;
+      color: $dark-lightest-font-color;
+    }
   }
 
   .summary-wrapper {
@@ -149,10 +158,14 @@ body.dark {
     margin-top: 2rem;
     border-bottom: 1px solid rgb(233, 236, 239);
     padding-bottom: 2rem;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   .experience-wrapper {
-
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
@@ -160,10 +173,9 @@ body.dark {
   }
 
   .h1-title {
-
     font-size: 1.7rem;
     font-weight: bold;
-    color:$dark-link-color;
+    color: $dark-link-color;
     border-left: 4px solid $dark-link-color;
     padding-left: 0.75rem;
     margin-bottom: 0;
@@ -180,5 +192,12 @@ body.dark {
     font-size: 1rem;
     margin-top: 0.6rem;
     padding-left: 1rem;
+  }
+
+  .skill-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgb(233, 236, 239);
   }
 }

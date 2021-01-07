@@ -132,6 +132,15 @@ body.light {
     display: flex;
     justify-content: space-between;
     padding-bottom: 2rem;
+
+    span {
+      color: $light-meun-color;
+    }
+
+    a {
+      text-decoration: none;
+      color: $light-meun-color;
+    }
   }
 
   .summary-wrapper {
@@ -143,9 +152,7 @@ body.light {
     padding-bottom: 2rem;
   }
 
-
   .experience-wrapper {
-
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
@@ -153,10 +160,9 @@ body.light {
   }
 
   .h1-title {
-
     font-size: 1.7rem;
     font-weight: bold;
-    color:$light-title-color;
+    color: $light-title-color;
     border-left: 4px solid $light-title-color;
     padding-left: 0.75rem;
   }

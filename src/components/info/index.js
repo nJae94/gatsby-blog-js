@@ -11,7 +11,9 @@ export const Info = () => {
       <div className="right">
         <span>010-3048-1970</span>
         <span>azuretic94@naver.com</span>
-        <span>nJae's Repo</span>
+        <span>
+          <a href="https://github.com/nJae94">nJae's Repo</a>
+        </span>
         <span>FitPet</span>
       </div>
     </header>

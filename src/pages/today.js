@@ -20,7 +20,11 @@ export default ({ data, location }) => {
     () =>
       _.uniq(
         posts.map(
-          post => post.frontmatter.category === "TIL" && post.frontmatter.tag
+          post =>
+            (post.frontmatter.category === "TIL" ||
+              post.frontmatter.category === "front" ||
+              post.frontmatter.category === "essay") &&
+            post.frontmatter.tag
         )
       ),
     []

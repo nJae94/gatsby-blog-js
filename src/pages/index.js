@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import styled from 'styled-components';
+import styled from "styled-components"
 import Bio from "../components/bio"
 import Layout from "../layout"
 import SEO from "../components/seo"
@@ -18,20 +18,18 @@ const BlogIndex = ({ data, location }) => {
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
-          return (
-            <MainContent key={title} title={title} post={post}/>
-          )
+          return <MainContent key={title} title={title} post={post} />
         })}
       </Wrapper>
     </Layout>
   )
-};
+}
 
 const Wrapper = styled.div`
-  width:100%;
+  width: 100%;
   display: flex;
-  flex-direction:column;
-`;
+  flex-direction: column;
+`
 
 export default BlogIndex
 
@@ -52,6 +50,8 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          category
+          tag
         }
       }
     }

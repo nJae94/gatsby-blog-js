@@ -7,7 +7,6 @@ import Essay from "../../styles/img/Essay.png"
 import { Link } from "gatsby"
 
 export default function MainContent({ title, post }) {
-  console.log(post)
   return (
     <ThumbnailLink to={post.fields.slug}>
       <div className="thumbnail">

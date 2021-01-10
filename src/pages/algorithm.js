@@ -26,8 +26,6 @@ export default ({ data, location }) => {
     []
   )
 
-  console.log(tags)
-
   useEffect(() => {
     setAlgorithm(
       tag === "all"

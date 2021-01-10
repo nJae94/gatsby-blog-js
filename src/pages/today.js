@@ -14,8 +14,6 @@ export default ({ data, location }) => {
 
   const [tag, setTag] = useState("all")
 
-  console.log(tag)
-
   const tags = useMemo(
     () =>
       _.uniq(
@@ -29,19 +27,27 @@ export default ({ data, location }) => {
       ),
     []
   )
-  console.log(tags)
 
   useEffect(() => {
     setTIL(
       tag === "all"
-        ? posts.filter(post => post.frontmatter.category === "TIL")
+        ? posts.filter(
+            post =>
+              post.frontmatter.category === "TIL" ||
+              post.frontmatter.category === "front" ||
+              post.frontmatter.category === "essay"
+          )
         : posts.filter(
             post =>
-              post.frontmatter.category === "TIL" &&
+              (post.frontmatter.category === "TIL" ||
+                post.frontmatter.category === "front" ||
+                post.frontmatter.category === "essay") &&
               post.frontmatter.tag === tag
           )
     )
   }, [posts, tag])
+
+  console.log(TIL)
 
   return (
     <Layout location={location} title={location.pathname.split("/")[1]}>

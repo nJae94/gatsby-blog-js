@@ -44,6 +44,7 @@ body.light {
 
   .post-content {
     float: left;
+    margin-top: 2rem;
     margin-bottom: 3rem;
     h2,
     h3,
@@ -150,6 +151,11 @@ body.light {
     margin-top: 2rem;
     border-bottom: 1px solid rgb(233, 236, 239);
     padding-bottom: 2rem;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   .experience-wrapper {

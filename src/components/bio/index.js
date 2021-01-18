@@ -1,9 +1,8 @@
+import React from "react"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import Image from "gatsby-image"
 
-import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
-import Image from "gatsby-image";
-
-import './index.scss';
+import "./index.scss"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -31,17 +30,16 @@ const Bio = () => {
   `)
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
-  const author = data.site.siteMetadata?.author;
+  const author = data.site.siteMetadata?.author
 
-  const avatar = data?.avatar?.childImageSharp?.fixed;
+  const avatar = data?.avatar?.childImageSharp?.fixed
 
-  const introduction = data.site.siteMetadata?.introduction;
+  const introduction = data.site.siteMetadata?.introduction
 
   return (
     <div className="bio">
       <div className="author">
         <div className="author-description">
-
           <div className="profile-img">
             <Image
               className="author-image"
@@ -49,24 +47,20 @@ const Bio = () => {
               alt={author}
               style={{
                 borderRadius: `30%`,
-                }}
+              }}
             />
           </div>
-          
+
           <div className="description">
-
             <div className="author-name">
-                <span className="name">Written by</span>
-                <Link to={'/'} className="content">
-                  <span>@{author.name}</span>
-                </Link>
+              <span className="name">Written by</span>
+              <Link to={"https://github.com/nJae94"} className="content">
+                <span>@{author.name}</span>
+              </Link>
             </div>
-            
-            <div className="introduction">
-                {introduction}
-            </div>
-          </div>
 
+            <div className="introduction">{introduction}</div>
+          </div>
         </div>
       </div>
     </div>

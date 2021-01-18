@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `nJae94.io`,
-    introduction: `Web Front-end Engineer 좋은 서비스를 효율적으로 잘 구현해내는 개발자를 꿈꾸고 있습니다.`,
+    introduction: `Web Front-end Engineer 좋은 서비스를 효율적으로 잘 구현해내는 개발자를 꿈꾸고 있습니다. 이 블로그는 JBEE님의 블로그를 기반으로 만들었습니다.`,
     author: {
       name: `nJae94`,
       summary: `who lives and works in San Francisco building useful things.`,

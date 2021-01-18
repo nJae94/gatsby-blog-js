@@ -35,7 +35,7 @@ body {
       .summary {
         position: fixed;
         right: calc(1rem);
-
+        height: calc(100vh / 10 - 50px);
         .info {
           width: calc(100vw / 4 - 50px);
           border-left: 2px solid rgb(233, 236, 239);

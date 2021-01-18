@@ -1,12 +1,15 @@
 import React from "react"
-import react from "../../styles/img/ReactIcon.png"
 import { ProgressBar } from "./progressBar"
 import "./index.scss"
 
 export const SkillInfo = ({ skill }) => {
   return (
     <div className="skill-container">
-      <img className="skill-img" src={react} alt="tjejj" />
+      <img
+        className="skill-img"
+        src={require(`../../styles/img/${skill.icon}`)}
+        alt={skill.name}
+      />
 
       <div className="skill-info-wrapper">
         <label>{skill.name}</label>

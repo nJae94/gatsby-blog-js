@@ -17,7 +17,7 @@ export const Header = ({ title, location, rootPath, show }) => {
 
   return (
     <header>
-      <div className={`wrapper ${(isRoot || show ) ? "show" : "hide"}`}>
+      <div className={`wrapper ${isRoot || show ? "show" : "hide"}`}>
         <div className="top">
           {
             <div className="title">
@@ -28,7 +28,7 @@ export const Header = ({ title, location, rootPath, show }) => {
           }
           <Menu>
             <nav className="menu">
-            <ListLink to="/today/">TIL</ListLink>
+              <ListLink to="/today/">TIL</ListLink>
               <ListLink to="/algorithm/">Algorithm</ListLink>
               <ListLink to="/about/">__About</ListLink>
             </nav>

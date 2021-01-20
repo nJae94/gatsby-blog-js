@@ -201,4 +201,19 @@ body.dark {
     padding-bottom: 2rem;
     border-bottom: 1px solid rgb(233, 236, 239);
   }
+
+  .back-button {
+    margin-top: 40px;
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: #394050;
+
+    a {
+      width: 100%;
+      text-decoration: none;
+      color: $dark-link-color;
+    }
+  }
 }

@@ -185,4 +185,18 @@ body.light {
     margin-top: 0.6rem;
     padding-left: 1rem;
   }
+
+  .back-button {
+    margin-top: 40px;
+    width: 80%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: #e9e6e6;
+
+    a {
+      text-decoration: none;
+      color: #38b2ac;
+    }
+  }
 }

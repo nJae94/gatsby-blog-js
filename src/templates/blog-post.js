@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../layout/"
 import TableOfContents from "../components/tableOfContents"
-import styled from "styled-components"
+import { Link } from "gatsby"
 import { Navigator } from "../components/navigator"
 import { Utterances } from "../components/utterances"
 
@@ -60,6 +60,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                     item={data.markdownRemark.tableOfContents}
                     currentHeaderUrl={currentUrl}
                   />
+                  <button className="back-button">
+                    <Link href="/">메인으로</Link>
+                  </button>
                 </div>
               </div>
             </div>

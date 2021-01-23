@@ -5,8 +5,6 @@ import "./index.scss"
 const Tag = ({ tags, setTags }) => {
   const tagRef = useRef(null)
 
-  console.log(tags)
-
   const scrollToCenter = useCallback(
     itemRef => {
       const { offsetWidth: tabWidth } = itemRef.current

@@ -49,8 +49,6 @@ export default ({ data, location }) => {
     )
   }, [posts, tag])
 
-  console.log(TIL)
-
   return (
     <Layout location={location} title={location.pathname.split("/")[1]}>
       <SEO title="TIL posts" />

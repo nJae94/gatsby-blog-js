@@ -44,7 +44,7 @@ const Bio = () => {
             <Image
               className="author-image"
               fixed={avatar}
-              alt={author}
+              alt={author.name}
               style={{
                 borderRadius: `30%`,
               }}

@@ -1,8 +1,30 @@
 ---
-title: Nextjs with Typescript
+title: Nextjs란 무엇인가?
 date: "2021-01-23"
-description: Next.js에 typescript를 적용.
+description: Next.js를 사용하기 전에 알아둘 정보.
 category: "front"
-tags: [Next, code]
+tags: [Next]
 draft: false
 ---
+
+우리 회사에서 운영하는 프로젝트의 대부분이 리액트로 구성되어 있었는데 새롭게 들어가는 프로젝트부터
+SEO 이슈로 인해 SSR 방식의 프론트 구성이 필요해 Next를 도입하기로 하였다.
+개인 프로젝트로 Next를 사용해본 경험은 있으나 실제 Next를 사용한 프로덕트를 개발할 수 있는 좋은 경험이라고 생각한다.
+
+## Nextjs 란?
+
+Next.js(이하 Next)는 React의 Server Side Rendering(이하 SSR)의 구현을 쉽게 진행할 수 있도록 도와주는 프레임워크이다. Next 없이도 React에서 SSR을 구현하는 것도 가능하지만 Next를 이용하는 편이 훨씬 간단하고 생산성이 높다고 생각이 든다.
+
+### Server Side Rendering ? (SSR)
+
+React, Vue 등을 사용하여 만드는 SPA는 최초에 javascript를 비롯해서 Html, CSS 등까지 모두 한 번에 요청 후 서버에는 데이터만 요청하는 방식이다.
+보통 이런 SPA는 Client Side Rendering을 통하여 구현되곤 하는데 CSR은 사용자에게 빠른 사용 경험을 제공할 수는 있지만 검색이 잘되지 않는다는 단점 또한 존 재는데 이 단점을 해결하기 위해서 우리 팀이 Next를 도입하기로 결정하였다.
+
+> 구글처럼 검색엔진이 javascript 엔진을 포함한 경우가 아니면 CSR 일 때 dom에 내용이 존재하지 않기 때문에 검색엔진에 노출이 되지 않는다.
+
+그럼 반대로 Next를 사용하여 구현하고자 하는 SSR은 무엇인가.
+SSR은 CSR과 반대로 전통적으로 웹 애플리케이션을 렌더링 하는 방식으로 사용자가 원하는 페이지에 접근하게 되면 각 페이지의 요청을 하며 서버가 렌더링을 마치고 데이터와 결합하여 파일을 내려주는 방식이다. 따라서 페이지를 렌더링할때 Dom에 컨텐츠가 넣어져 렌더링됨으로 CSR방식에 비해 SEO(검색엔진 최적화)에 용이하다고 볼 수 있다.
+
+## Next를 사용하는 이유
+
+위에 언급한 SPA에서 CSR이 아닌 SSR을 사용해야 하는 이슈 이외에도 Next는 pages라는 폴더를 기반으로 자동 라우팅이 지원된다는 점과 아직 정확히 잘 모르겠지만 코드 스플 라이팅 기능을 기본으로 제공한다는 점이 있는데 이 코드스플리팅에 대해서는 다음에 자세히 알아봐야겠다.

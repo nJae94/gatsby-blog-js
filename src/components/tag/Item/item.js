@@ -1,20 +1,22 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef } from "react"
 
-const Item = ({title, scrollToCenter, setTags}) => {
+const Item = ({ title, scrollToCenter, setTags }) => {
+  console.log(title)
 
   const itemRef = useRef(null)
 
   const handleClick = useCallback(() => {
-    scrollToCenter(itemRef);
+    scrollToCenter(itemRef)
     setTags(title)
-  },[itemRef.current])
+  }, [itemRef.current])
 
-
-  return (
-    <div className="item" ref={itemRef} >
-      <div style={{width:'100%'}} onClick={handleClick}>{title}</div>
+  return title.map((t, i) => (
+    <div className="item" ref={itemRef} key={i}>
+      <div style={{ width: "100%" }} onClick={handleClick}>
+        {t}
+      </div>
     </div>
-  )
+  ))
 }
 
 export default Item

@@ -10,6 +10,8 @@ import _ from "lodash"
 export default ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
 
+  console.log(posts)
+
   const [TIL, setTIL] = useState([])
 
   const [tag, setTag] = useState("all")
@@ -22,7 +24,7 @@ export default ({ data, location }) => {
             (post.frontmatter.category === "TIL" ||
               post.frontmatter.category === "front" ||
               post.frontmatter.category === "essay") &&
-            post.frontmatter.tag
+            post.frontmatter.tags
         )
       ),
     []
@@ -42,7 +44,7 @@ export default ({ data, location }) => {
               (post.frontmatter.category === "TIL" ||
                 post.frontmatter.category === "front" ||
                 post.frontmatter.category === "essay") &&
-              post.frontmatter.tag === tag
+              post.frontmatter.tags === tag
           )
     )
   }, [posts, tag])
@@ -90,7 +92,7 @@ export const pageQuery = graphql`
           title
           description
           category
-          tag
+          tags
         }
       }
     }

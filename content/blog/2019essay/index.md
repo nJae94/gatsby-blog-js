@@ -3,7 +3,7 @@ title: 2020년도 회고록
 date: "2021-01-15"
 description: 2020년도의 내가 겪었던 이직 후 진행했던 프로젝트의 회고록.
 category: "essay"
-tag: essay
+tags: [essay]
 draft: false
 ---
 

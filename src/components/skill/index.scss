@@ -10,7 +10,7 @@
     margin-top: 0.5rem;
 
     @media screen and (max-width: 400px) {
-      width: 30%;
+      display: none;
     }
   }
 
@@ -22,11 +22,6 @@
 
     @media screen and (max-width: 1024px) {
       width: -webkit-fill-available;
-    }
-
-    @media screen and (max-width: 400px) {
-      margin-left: 1rem;
-      width: 60%;
     }
   }
 }

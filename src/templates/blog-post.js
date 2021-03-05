@@ -6,6 +6,8 @@ import { Link } from "gatsby"
 import { Navigator } from "../components/navigator"
 import { Utterances } from "../components/utterances"
 
+import "../styles/code.scss"
+
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const metaData = data.site.siteMetadata

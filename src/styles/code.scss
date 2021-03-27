@@ -7,16 +7,12 @@ pre[class*="language-"] {
   border-radius: 0.6em;
 }
 
+code[class*="language-"] {
+  line-height: 1.6;
+  color: white;
+}
+
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #212121;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: 0.1em 0.6em;
-  border-radius: 0.2em;
-  white-space: normal;
-  background: $inline-dimmed-color;
-  color: $inline-text-color;
 }
